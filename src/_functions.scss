@@ -1,0 +1,26 @@
+@use "sass:string";
+@use "sass:map";
+
+@function getResolution($media) {
+  @return '#{$prefix}-#{$media}';
+}
+
+@function toClassName($suffix,$media) {
+  @if ($suffix == null and $media == null) {
+    @return string.unquote('#{$prefix}');
+  } @else if ($suffix != null and $media == null) {
+    @return string.unquote('#{$prefix}-#{$suffix}');
+  } @else if ($suffix == null and $media != null) {
+    @return string.unquote('#{getResolution($media)}');
+  } @else if ($suffix != null and $media != null) {
+    @return string.unquote('#{getResolution($media)}-#{$suffix}');
+  }
+}
+
+@function toCssValue($css) {
+  @return string.unquote($css);
+}
+
+@function getAlignmentCssValue($alignment) {
+  @return map.get($alignments-values, $alignment);
+}

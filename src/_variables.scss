@@ -1,0 +1,116 @@
+// Prefix:
+$prefix: '.flx';
+
+// Modifiers:
+$justify: 'justify';
+$align-items: 'align-items';
+$align-content: 'align-content';
+$order: 'order';
+$grow: 'grow';
+$shrink: 'shrink';
+$basis: 'basis';
+$self: 'self';
+
+// Orientations classes:
+$orientations-classes: (
+        row: 'row',
+        row-reverse: 'row-reverse',
+        column: 'column',
+        column-reverse: 'column-reverse'
+);
+
+// Wrap classes:
+$wrap-classes: (
+        wrap: 'wrap',
+        nowrap: 'nowrap',
+        wrap-reverse: 'wrap-reverse'
+);
+
+// Alignments(justify-content) classes:
+$justify-content-classes: (
+        stretch: 'stretch',
+        start: 'start',
+        end: 'end',
+        center: 'center',
+        space-between: 'between',
+        space-around: 'around',
+        space-evenly: 'evenly',
+        auto: 'auto',
+);
+
+// Alignments(align-items) classes:
+$align-items-classes: (
+        stretch: 'stretch',
+        start: 'start',
+        end: 'end',
+        center: 'center',
+        baseline: 'baseline',
+        auto: 'auto',
+);
+
+// Alignments(align-content) classes:
+$align-content-classes: (
+        stretch: 'stretch',
+        start: 'start',
+        end: 'end',
+        center: 'center',
+        space-between: 'between',
+        space-around: 'around',
+        space-evenly: 'evenly',
+        baseline: 'baseline',
+        auto: 'auto',
+);
+
+$align-self-classes: (
+        stretch: 'stretch',
+        start: 'start',
+        end: 'end',
+        center: 'center',
+        baseline: 'baseline',
+        auto: 'auto',
+);
+
+// Gap(row|column) classes:
+$gap-classes: (
+        row-gap: 'row-gap',
+        column-gap: 'column-gap'
+);
+
+// All actual alignments keys & values:
+$alignments-values: (
+        stretch: 'stretch',
+        start: 'flex-start',
+        end: 'flex-end',
+        center: 'center',
+        between: 'space-between',
+        around: 'space-around',
+        evenly: 'space-evenly',
+        baseline: 'baseline',
+        auto: 'auto'
+);
+
+// Gap spacer values:
+$spacer: 1rem;
+$spacers: (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer,
+        4: $spacer * 1.5,
+        5: $spacer * 3,
+);
+
+// Proportional sizes:
+$sizes: 1,2,3,4,5;
+
+// Breakpoints:
+$breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
+
+

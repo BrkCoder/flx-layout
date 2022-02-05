@@ -1,0 +1,152 @@
+@import "src/functions";
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin orientation($orientation, $media) {
+  @if ($orientation != null) {
+    #{toClassName($orientation, $media)} {
+      @include flex;
+      flex-direction: #{toCssValue($orientation)};
+    }
+  } @else {
+    #{toClassName(null, $media)} {
+      @include flex;
+    }
+  }
+}
+
+@mixin wrap($wrap, $media) {
+  @if ($wrap != null) {
+    #{toClassName($wrap, $media)} {
+      @include flex;
+      flex-wrap: #{toCssValue($wrap)};
+    }
+  }
+}
+
+@mixin justify($alignment, $media) {
+  @if ($alignment != null) {
+    #{toClassName('#{$justify}-#{$alignment}', $media)} {
+      @include flex;
+      justify-content: #{toCssValue(getAlignmentCssValue($alignment))};
+    }
+  }
+}
+
+@mixin align-items($alignment, $media) {
+  @if ($alignment != null) {
+    #{toClassName('#{$align-items}-#{$alignment}', $media)} {
+      @include flex;
+      align-items: #{toCssValue(getAlignmentCssValue($alignment))};
+    }
+  }
+}
+
+@mixin align-content($alignment, $media) {
+  @if ($alignment != null) {
+    #{toClassName('#{$align-content}-#{$alignment}', $media)} {
+      @include flex;
+      align-content: #{toCssValue(getAlignmentCssValue($alignment))};
+    }
+  }
+}
+
+@mixin self($alignment, $media) {
+  @if ($alignment != null) {
+    #{toClassName('#{$self}-#{$alignment}', $media)} {
+      align-self: #{toCssValue(getAlignmentCssValue($alignment))};
+    }
+  }
+}
+
+@mixin gap($gap, $media) {
+  @if ($gap != null) {
+    @each $key, $value in $spacers {
+      #{toClassName('#{$gap}-#{$key}', $media)} {
+        @include flex;
+        #{toCssValue(#{$gap})}: #{toCssValue('#{$value}')}
+      }
+    }
+  }
+}
+
+@mixin order($media) {
+    @each $size in $sizes {
+      #{toClassName('#{$order}-#{$size}', $media)} {
+        order: #{toCssValue('#{$size}')}
+      }
+    }
+}
+
+@mixin grow($media) {
+    @each $size in $sizes {
+      #{toClassName('#{$grow}-#{$size}', $media)} {
+        flex-grow: #{toCssValue('#{$size}')};
+      }
+    }
+}
+
+@mixin shrink($media) {
+    @each $size in $sizes {
+      #{toClassName('#{$shrink}-#{$size}', $media)} {
+        flex-shrink: #{toCssValue('#{$size}')};
+      }
+    }
+}
+
+@mixin basis($media) {
+    @for $i from 1 through 100 {
+      #{toClassName('#{$basis}-#{$i}', $media)} {
+        flex-basis: #{toCssValue('#{$i}%')};
+      }
+    }
+}
+
+
+@mixin base($media) {
+  @include orientation(null, $media);
+
+  @each $key, $value in $orientations-classes {
+    @include orientation($value,$media);
+  }
+
+  @each $key, $value in $wrap-classes {
+    @include wrap($value, $media);
+  }
+
+  @each $key, $value in $justify-content-classes {
+    @include justify($value, $media);
+  }
+
+  @each $key, $value in $align-items-classes {
+    @include align-items($value, $media);
+  }
+
+  @each $key, $value in $align-content-classes {
+    @include align-content($value, $media);
+  }
+
+  @each $key, $value in $gap-classes {
+    @include gap($value, $media);
+  }
+
+  @each $key, $value in $align-self-classes {
+    @include self($value, $media);
+  }
+
+  @include order($media);
+  @include grow($media);
+  @include shrink($media);
+  @include basis($media);
+}
+
+@mixin flx{
+  @each $key, $value in $breakpoints{
+    @media (min-width: #{$value}) {
+      @include base($key);
+    }
+  }
+  @include base(null);
+}
