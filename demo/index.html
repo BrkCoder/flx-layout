@@ -5,9 +5,25 @@
     <title>Flx Demo</title>
     <link rel="stylesheet" href="style.scss">
 </head>
-<body>
-<div class="flx">
-
+<body class="flx flx-column">
+<div class="flx flx-column flx-grow-1 flx-shrink-1 flx-basis-100">
+    <header class="flx flx-justify-center header">
+        <span class="title">Header</span>
+    </header>
+    <main class="flx main flx-justify-evenly flx-grow-1 flx-shrink-1">
+        <div class="flx flx-row flx-grow-1 flx-shrink-1 flx-basis-25 flx-justify-center flx-align-items-center left">
+            <span class="title">Left</span>
+        </div>
+        <div class="flx  flx-row flx-grow-3 flx-shrink-3 flx-basis-50 flx-justify-center flx-align-items-center middle">
+            <span class="title">Middle</span>
+        </div>
+        <div class="flx  flx-row flx-grow-1 flx-shrink-1 flx-basis-25 flx-justify-center flx-align-items-center right">
+            <span class="title">Right</span>
+        </div>
+    </main>
+    <footer class="flx flx-justify-center footer">
+        <span class="title">Footer</span>
+    </footer>
 </div>
 </body>
 </html>

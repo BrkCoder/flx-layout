@@ -1,2 +1,37 @@
 @import "src/flx";
 
+*,*::before, *::after{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+}
+
+.header{
+  height: 50px;
+  background-color: rebeccapurple;
+}
+
+.left{
+  background-color: coral;
+}
+
+.right{
+  background-color: cornflowerblue;
+}
+
+.middle{
+  background-color: darkorange;
+}
+
+.footer{
+  height: 50px;
+  background-color: brown;
+}
+
+.title{
+  font-size: 2rem;
+}
