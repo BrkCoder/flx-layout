@@ -2,6 +2,17 @@
   "name": "flx-layout",
   "version": "1.0.0",
   "description": "flx-layout is a flexbox library for creating responsive and mobile-first layouts",
+  "keywords": [
+    "flex",
+    "flexbox",
+    "layout",
+    "css",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "web"
+  ],
   "source": "src/flx-layout.scss",
   "style": "dist/flx-layout.css",
   "scss": "src/flx-layout.scss",
