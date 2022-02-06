@@ -14,7 +14,7 @@ In your global styles import ``flx-layout``:
 ```
 In your html write the following:
 ```html
-<div class="flx flx-row flx-justify-between">
+<div class="flx-layout flx-layout-row flx-layout-justify-between">
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
