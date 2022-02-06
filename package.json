@@ -1,14 +1,15 @@
 {
-  "name": "flx",
+  "name": "flx-layout",
   "version": "1.0.0",
   "description": "",
-  "source": "src/flx.scss",
-  "style": "dist/flx.css",
-  "scss": "src/flx.scss",
+  "source": "src/flx-layout.scss",
+  "style": "dist/flx-layout.css",
+  "scss": "src/flx-layout.scss",
   "scripts": {
     "start": "parcel ./demo/index.html",
     "watch": "parcel watch",
-    "build": "parcel build"
+    "build": "parcel build",
+    "publish": "npm run build && npm publish"
   },
   "author": "Barak Inbal",
   "license": "ISC",

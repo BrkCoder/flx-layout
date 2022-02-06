@@ -1,16 +1,16 @@
 # Introduction
-Flx is a flexbox library for creating responsive and mobile-first layouts
+flx-layout is a flexbox library for creating responsive and mobile-first layouts
 
 ## Quick start
 Looking to quickly add Flx to your project?
-Install Flx using npm package:
+Install flx-layout using npm package:
 
-``npm install --save flx``
+``npm install --save flx-layout``
 
 ## Usage
-In your global styles import ``flx``:
+In your global styles import ``flx-layout``:
 ```css
-@import 'flx';
+@import 'flx-layout';
 ```
 In your html write the following:
 ```html
