@@ -2,9 +2,13 @@
   "name": "flx",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "src/flx.scss",
+  "style": "dist/flx.css",
+  "scss": "src/flx.scss",
   "scripts": {
-    "start": "parcel ./demo/index.html"
+    "start": "parcel ./demo/index.html",
+    "watch": "parcel watch",
+    "build": "parcel build"
   },
   "author": "Barak Inbal",
   "license": "ISC",
