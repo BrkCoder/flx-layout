@@ -1,7 +1,7 @@
 {
   "name": "flx-layout",
   "version": "1.0.0",
-  "description": "",
+  "description": "flx-layout is a flexbox library for creating responsive and mobile-first layouts",
   "source": "src/flx-layout.scss",
   "style": "dist/flx-layout.css",
   "scss": "src/flx-layout.scss",
@@ -9,7 +9,8 @@
     "start": "parcel ./demo/index.html",
     "watch": "parcel watch",
     "build": "parcel build",
-    "publish": "npm run build && npm publish"
+    "publish": "npm run build && npm publish",
+    "pack": "npm run build && npm pack"
   },
   "author": "Barak Inbal",
   "license": "ISC",
